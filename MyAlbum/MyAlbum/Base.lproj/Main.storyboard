@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyAlbum" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MyPics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pLM-7x-66A">
+                                <rect key="frame" x="156" y="134" width="102" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog" translatesAutoresizingMaskIntoConstraints="NO" id="Gzo-3e-Xlm">
+                                <rect key="frame" x="47" y="243" width="320" height="320"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="320" id="9q6-8k-e41"/>
+                                    <constraint firstAttribute="width" constant="320" id="Oyj-Ge-bxI"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="₩1,000,000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z7u-aZ-DlB">
+                                <rect key="frame" x="118.5" y="633" width="177" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oau-o3-5g0">
+                                <rect key="frame" x="152" y="694" width="110" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <state key="normal" title="Refresh">
+                                    <color key="titleColor" red="0.42346835903029634" green="0.74132194113508121" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="showAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Kq-NS-xm2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Oau-o3-5g0" firstAttribute="top" secondItem="Z7u-aZ-DlB" secondAttribute="bottom" constant="25" id="DJX-Vc-tpS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Oau-o3-5g0" secondAttribute="bottom" constant="120" id="IQv-pY-FJT"/>
+                            <constraint firstItem="Gzo-3e-Xlm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ItJ-HL-hbb"/>
+                            <constraint firstItem="pLM-7x-66A" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nly-Ha-4LA"/>
+                            <constraint firstItem="Oau-o3-5g0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OJi-gm-kvi"/>
+                            <constraint firstItem="pLM-7x-66A" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="90" id="Se0-AS-BCF"/>
+                            <constraint firstItem="Gzo-3e-Xlm" firstAttribute="top" secondItem="pLM-7x-66A" secondAttribute="bottom" constant="73" id="hPU-8y-f6f"/>
+                            <constraint firstItem="Z7u-aZ-DlB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rQH-Ln-Fth"/>
+                            <constraint firstItem="Z7u-aZ-DlB" firstAttribute="top" secondItem="Gzo-3e-Xlm" secondAttribute="bottom" constant="70" id="zl8-Ch-Qdy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="priceLabel" destination="Z7u-aZ-DlB" id="AvV-L4-zw6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8.6956521739130448" y="98.4375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dog" width="1372" height="2024.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
